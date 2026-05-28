@@ -3,7 +3,7 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Date de début : mets la date d'aujourd'hui au format YYYY-MM-DD
+// Date de début : 28 mai 2026
 const DATE_DEBUT = '2026-05-28'; 
 const DUREE_JOURS = 7;
 
