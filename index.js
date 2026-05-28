@@ -3,8 +3,8 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const DATE_DEBUT = '2026-05-28T21:40:00'; // Départ 21h40 pile
-const DUREE_MINUTES = 5; // Coupe après 5 minutes
+const DATE_DEBUT = '2026-05-28T21:40:00'; // Départ maintenant 21h40
+const DUREE_MINUTES = 1440; // 1 jour = 24h x 60min = 1440min
 
 app.get('/', async (req, res) => {
   const debut = new Date(DATE_DEBUT);
