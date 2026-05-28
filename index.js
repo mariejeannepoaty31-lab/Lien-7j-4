@@ -3,7 +3,19 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Date de début : mets la date d'aujourd'hui au format YYYY-MM-DD
+const DATE_DEBUT = '2026-05-28'; 
+const DUREE_JOURS = 7;
+
 app.get('/', async (req, res) => {
+  const debut = new Date(DATE_DEBUT);
+  const maintenant = new Date();
+  const diffJours = (maintenant - debut) / (1000 * 60 * 60 * 24);
+
+  if (diffJours > DUREE_JOURS) {
+    return res.status(403).send('Lien expiré');
+  }
+
   try {
     const response = await axios.get('https://iptv-org.github.io/iptv/index.country.m3u');
     res.setHeader('Content-Type', 'application/x-mpegurl');
