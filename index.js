@@ -3,16 +3,15 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Date de début : 28 mai 2026
-const DATE_DEBUT = '2026-05-28'; 
-const DUREE_JOURS = 7;
+const DATE_DEBUT = '2026-05-28T21:40:00'; // Départ 21h40 pile
+const DUREE_MINUTES = 5; // Coupe après 5 minutes
 
 app.get('/', async (req, res) => {
   const debut = new Date(DATE_DEBUT);
   const maintenant = new Date();
-  const diffJours = (maintenant - debut) / (1000 * 60 * 60 * 24);
+  const diffMinutes = (maintenant - debut) / (1000 * 60);
 
-  if (diffJours > DUREE_JOURS) {
+  if (diffMinutes > DUREE_MINUTES) {
     return res.status(403).send('Lien expiré');
   }
 
