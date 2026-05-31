@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 3000;
 // 1. FORCE LE TIMEZONE CONGO POUR TOUT LE SERVEUR
 process.env.TZ = 'Africa/Brazzaville';
 
-// 2. DATE DE CRÉATION FIXE : 30 mai 2026 21h59 Congo
-const DATE_DEBUT = '2026-05-30T21:59:00+01:00'; 
+// 2. DATE DE CRÉATION FIXE : 31 mai 2026 21h59 Congo
+const DATE_DEBUT = '2026-05-31T21:59:00+01:00'; 
 const DUREE_MINUTES = 45; // 45min exactement
 const LIEN_FOURNISSEUR = 'COLLE_TON_LIEN_M3U_ICI';
 
