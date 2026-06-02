@@ -7,7 +7,7 @@ process.env.TZ = 'Africa/Brazzaville';
 
 // ========== MODIFIE SEULEMENT CES 3 LIGNES ==========
 // LIGNE 1: Mets l'heure Congo actuelle avec +01:00
-const DATE_DEBUT = '2026-06-02T21:50:00+01:00'; 
+const DATE_DEBUT = '2026-06-02T21:56:00+01:00'; 
 
 // LIGNE 2: Durée 15min
 const DUREE_MINUTES = 15;
